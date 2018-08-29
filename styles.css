@@ -20,6 +20,11 @@ body {
 }
 
 #geojson-output {
+  /* Θέλω το GeoJson string να μην επηρεάζει τη δομή της σελίδας οταν εμφανιζετε */
+  position: absolute;
+  top: 0;
+  left :0;
+  
   width: 100%;
   -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
   -moz-box-sizing: border-box; /* FF1+ */
