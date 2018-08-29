@@ -16,5 +16,12 @@
       <button>Download GeoJson</button>
     </a>
     <button id="toggle-geojson" class="button">Toggle GeoJson</button>
+    <script>
+      $(document).ready(function(){
+        $("#toggle-geojson").click(function(){
+          $("#geojson-output").toggle();
+    });
+});
+</script>
   </body>
 </html>
