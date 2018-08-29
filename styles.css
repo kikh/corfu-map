@@ -29,7 +29,7 @@ body {
   background-color: #F1F1F1;
   display: none;
 }
-#download-link, .button{
+.button{
   position: absolute;
   right:10px;
   z-index:100;
