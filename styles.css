@@ -20,7 +20,7 @@ body {
 }
 
 #geojson-output {
-  /* Θέλω το GeoJson string να μην επηρεάζει τη δομή της σελίδας οταν εμφανιζετε */
+  /* I dont want GeoJson string to mess my map layout. I hate that kind of scrolls */
   position: absolute;
   bottom: 0;
   left :0;
