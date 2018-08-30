@@ -27,12 +27,15 @@
         <option value='5'>excellent</option>
       </select>
       <button class="modal" id="left-btn">OK</button>
-      <button class="modal" id="right-btn" onclick="HideRatingBox">Cancel</button>
+      <button class="modal" id="right-btn">Cancel</button>
     </div>
     <script>
       $(document).ready(function(){
         $("#toggle-geojson").click(function(){
-          $("#geojson-output").toggle();
+            $("#geojson-output").toggle();
+        });
+        $("#right-btn").click(function(){
+            $("#rating-box").css("display", "none");
         });
       });
     </script>
