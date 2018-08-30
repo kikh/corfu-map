@@ -75,5 +75,5 @@ function DeleteAll() {
 }
 
 function RatePath(){
-    document.getElementById("#rating-box"),style.display = "block";
+    document.getElementById("rating-box"),style.display = "block";
 }
