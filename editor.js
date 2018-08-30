@@ -64,5 +64,14 @@ function DeletePath(event) {
     }
 }
 
+function DeleteAll() {
+    var r = confirm("Do you want to delete all features an the map?");	
+    if (r == true) {
+        map.data.forEach(function(feature) {
+            map.data.remove(feature);
+        });
+    }
+}
+
 
 
