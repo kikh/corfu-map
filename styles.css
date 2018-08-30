@@ -42,6 +42,10 @@ body {
   z-index:100;
 }
 
+#delete-all{
+   top:70px;
+}
+
 #toggle-geojson{
   top:40px;
 }
