@@ -96,7 +96,7 @@ function RatePath(event){
             });
 	    event.feature.setProperty('Rating', rating);
 	}else if (rating == 3){	
-	    color = #4646cc';
+	    color = '#4646cc';
             map.data.overrideStyle(event.feature, {
                 strokeColor: color,
 	        fillColor: color
