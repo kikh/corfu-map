@@ -76,10 +76,9 @@ function DeleteAll() {
 
 function RatePath(event){
     document.getElementById("rating-box").style.display = "block";
-    var e = document.getElementById("rate-selection");
-    var rating = e.options[e.selectedIndex].value;
     document.getElementById("left-btn").addEventListener("click", function(){
-	alert(rating);
+	var e = document.getElementById("rate-selection");
+        var rating = e.options[e.selectedIndex].value;
 	if (rating == 1){
 	    setColor(event, '#750013');
 	}else if (rating == 2){
