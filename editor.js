@@ -1,6 +1,7 @@
 // The Google Map.
 var map;
 var rating = "unknown";
+var color = "#ffffff";
 var geoJsonOutput;
 var downloadLink;
 
@@ -76,30 +77,45 @@ function DeleteAll() {
 
 function RatePath(event){
     document.getElementById("rating-box").style.display = "block";
+    document.getElementById("left-btn").addListener('click',function(){
 	var e = document.getElementById("rate-selection");
         var rating = e.options[e.selectedIndex].value;
 	if (rating == 1){
-	    setColor(event, '#de2443');
+	    color = '#de2443';
+            map.data.overrideStyle(event.feature, {
+                strokeColor: color,
+	        fillColor: color
+            });
+    event.feature.setProperty("Color", color);
 	    event.feature.setProperty('Rating', rating);
 	}else if (rating == 2){
-	    setColor(event, '#de2443');
+	    color = '#de2443';
+            map.data.overrideStyle(event.feature, {
+                strokeColor: color,
+	        fillColor: color
+            });
 	    event.feature.setProperty('Rating', rating);
 	}else if (rating == 3){	
-	    setColor(event, '#4646cc');
+	    color = #4646cc';
+            map.data.overrideStyle(event.feature, {
+                strokeColor: color,
+	        fillColor: color
+            });
             event.feature.setProperty('Rating', rating);
 	}else if (rating == 4){	
-	    setColor(event, '#11b27f');
+	    color = '#11b27f';
+            map.data.overrideStyle(event.feature, {
+                strokeColor: color,
+	        fillColor: color
+            });
             event.feature.setProperty('Rating', rating);
 	}else if (rating == 5){	
-	    setColor(event, '#1dc606');
+	    color = '#1dc606';
+            map.data.overrideStyle(event.feature, {
+                strokeColor: color,
+	        fillColor: color
+            });
 	    event.feature.setProperty('Rating', rating);
 	}
-}
-
-function setColor(event, color) {
-    map.data.overrideStyle(event.feature, {
-        strokeColor: color,
-	fillColor: color
     });
-    event.feature.setProperty("Color", color);
 }
