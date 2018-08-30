@@ -135,7 +135,8 @@ function RatePath(event) {
 
 function setColor(event, color) {
     map.data.overrideStyle(event.feature, {
-        strokeColor: color
+        strokeColor: color,
+	fillColor: color
     });
     event.feature.setProperty("Color", color);
 }
