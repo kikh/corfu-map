@@ -94,7 +94,6 @@ function RatePath(event){
 	    setColor(event, '#1dc606');
 	    event.feature.setProperty('Rating', rating);
 	}
-	document.getElementById("rating-box").style.display = "none";
 }
 
 function setColor(event, color) {
