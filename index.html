@@ -17,12 +17,22 @@
     </a>
     <button id="toggle-geojson" class="button">Toggle GeoJson</button>
     <button id="delete-all" class="button" onclick="DeleteAll()">Delete all features</button>
+    <div id="rating-box">
+      <h2>Path rating</h2>
+      <select name='rating'>
+        <option value='1'>very bad</option>
+        <option value='2'>bad</option>
+        <option value='3'>good</option>
+        <option value='4'>very good</option>
+        <option value='5'>excellent</option>
+      </select>
+    </div>
     <script>
       $(document).ready(function(){
         $("#toggle-geojson").click(function(){
           $("#geojson-output").toggle();
-    });
-});
-</script>
+        });
+      });
+    </script>
   </body>
 </html>
