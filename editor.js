@@ -51,3 +51,8 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
 }
+
+//changing the stroke of the paths on mouseover
+map.data.addListener('mouseover',function (event){map.data.overrideStyle(event.feature,{strokeWeight:5});});
+map.data.addListener('mouseover',function (event){map.data.overrideStyle(event.feature,{strokeWeight:3});});
+
