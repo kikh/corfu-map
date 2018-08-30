@@ -76,8 +76,33 @@ function DeleteAll() {
 }
 
 function RatePath(event) {
-    document.getElementById("rating-box").style.display = "block";
-    document.getElementById("left-btn").addListener('click',function (event){ 
-    
+    bootbox.prompt({
+        title: "Path rating",
+        inputType: 'select',
+        inputOptions: [
+            {
+                text: 'very bad',
+                value: '1',
+            },
+            {
+                text: 'bad',
+                value: '2',
+            },
+            {
+                text: 'good',
+                value: '3',
+            },
+            {
+                text: 'very good',
+                value: '4',
+            },
+	    {
+                text: 'perfect',
+                value: '5',
+            }
+        ],
+        callback: function (result) {
+            console.log(result);
+        }
     });
 }
