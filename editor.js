@@ -76,7 +76,7 @@ function DeleteAll() {
 
 function RatePath(event){
     document.getElementById("rating-box").style.display = "block";
-    document.getElementById("left-btn").addEventListener("click", function(){
+    document.getElementById("left-btn").addEventListener("click", function(event){
 	var e = document.getElementById("rate-selection");
         var rating = e.options[e.selectedIndex].value;
 	if (rating == 1){
@@ -101,7 +101,8 @@ function RatePath(event){
 
 function setColor(event, color) {
     map.data.overrideStyle(event.feature, {
-        strokeColor: color
+        strokeColor: color,
+	fillColor: color
     });
     event.feature.setProperty("Color", color);
 }
