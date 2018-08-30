@@ -106,3 +106,13 @@ select{
   border: 1px solid #000000;
   background:#FFFFFF;
 }
+
+.btn-default{
+  float: left;
+  margin-bottom: 20px;
+}
+
+.btn-primary{
+  float: right;
+  margin-bottom: 20px;
+}
