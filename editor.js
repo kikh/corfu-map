@@ -81,8 +81,8 @@ function RatePath(event){
         var rating = e.options[e.selectedIndex].value;
 	if (rating == 1){
 	    map.data.overrideStyle(event.feature, {
-                strokeColor: color,
-	        fillColor: color
+                strokeColor: "#fffff",
+	        fillColor: "#fffff"
             });
             event.feature.setProperty("Color", "#fffff");
 	    event.feature.setProperty('Rating', rating);
