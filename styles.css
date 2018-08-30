@@ -69,6 +69,19 @@ body {
   display: none;
 }
 
+#btn-wrap{
+  width: 90%;
+  margin: auto;
+}
+
+#left-btn{
+  float: left;
+}
+
+#right-btn{
+  float: right;
+}
+
 h2{
   pading-top: 20px;
 }
