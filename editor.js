@@ -127,7 +127,7 @@ function RatePath(event) {
                 else {
                     bootbox.alert("Please, select one rating!");
                 }
-                event.feature.properties.Rating = rating;
+                event.feature.setProperty(event, "Rating", rating);
             }
         }
     });
