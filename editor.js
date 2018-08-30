@@ -75,46 +75,9 @@ function DeleteAll() {
     }
 }
 
-function RatePath(event){
+function RatePath(event) {
     document.getElementById("rating-box").style.display = "block";
-    document.getElementById("left-btn").addEventListener("click", function(){
-	var e = document.getElementById("rate-selection");
-        var rating = e.options[e.selectedIndex].value;
-	if (rating == 1){
-	    color = '#de2443';
-            map.data.overrideStyle(event.feature, {
-                strokeColor: color,
-	        fillColor: color
-            });
-	    event.feature.setProperty('Rating', rating);
-	}else if (rating == 2){
-	    color = '#de2443';
-            map.data.overrideStyle(event.feature, {
-                strokeColor: color,
-	        fillColor: color
-            });
-	    event.feature.setProperty('Rating', rating);
-	}else if (rating == 3){	
-	    color = '#4646cc';
-            map.data.overrideStyle(event.feature, {
-                strokeColor: color,
-	        fillColor: color
-            });
-            event.feature.setProperty('Rating', rating);
-	}else if (rating == 4){	
-	    color = '#11b27f';
-            map.data.overrideStyle(event.feature, {
-                strokeColor: color,
-	        fillColor: color
-            });
-            event.feature.setProperty('Rating', rating);
-	}else if (rating == 5){	
-	    color = '#1dc606';
-            map.data.overrideStyle(event.feature, {
-                strokeColor: color,
-	        fillColor: color
-            });
-	    event.feature.setProperty('Rating', rating);
-	}
+    document.getElementById("left-btn").addListener('click',function (event){ 
+    
     });
 }
