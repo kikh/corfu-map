@@ -127,7 +127,7 @@ function RatePath(event) {
                 else {
                     bootbox.alert("Please, select one rating!");
                 }
-                event.feature.setProperty('Rating', rating);
+                event.feature.properties.Rating = rating;
             }
         }
     });
@@ -138,5 +138,5 @@ function setColor(event, color) {
         strokeColor: color,
 	fillColor: color
     });
-    event.feature.setProperty("Color", color);
+    event.feature.properties.Color = color;
 }
