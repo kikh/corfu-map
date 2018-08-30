@@ -76,15 +76,11 @@ function DeleteAll() {
 
 function RatePath(event){
     document.getElementById("rating-box").style.display = "block";
-    document.getElementById("left-btn").addEventListener("click", function(){
+    document.getElementById("left-btn").addEventListener("click", function(event){
 	var e = document.getElementById("rate-selection");
         var rating = e.options[e.selectedIndex].value;
 	if (rating == 1){
-	    map.data.overrideStyle(event.feature, {
-                strokeColor: "#fffff",
-	        fillColor: "#fffff"
-            });
-            event.feature.setProperty("Color", "#fffff");
+	    setColor(event, '#de2443');
 	    event.feature.setProperty('Rating', rating);
 	}else if (rating == 2){
 	    setColor(event, '#de2443');
@@ -108,5 +104,5 @@ function setColor(event, color) {
         strokeColor: color,
 	fillColor: color
     });
-    event.feature.setProperty("Color", value);
+    event.feature.setProperty("Color", color);
 }
