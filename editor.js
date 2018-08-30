@@ -102,7 +102,40 @@ function RatePath(event) {
             }
         ],
         callback: function (result) {
-            console.log(result);
+            if (result != null) {
+                var rating = "unknown";
+                if (result == 1) {
+                    rating = 1;
+                    setColor(event, '#c80627');
+                }
+                else if (result == 2) {
+                    rating = 2;
+                    setColor(event, '#fbc646');
+                }
+                else if (result == 3) {
+                    rating = 3;
+                    setColor(event, '#fcff00');
+                }
+                else if (result == 4) {
+                    rating = 4;
+                    setColor(event, '#3728ff');
+                }
+                else if (result == 5) {
+                    rating = 5;
+                    setColor(event, '#01dd06');
+                }
+                else {
+                    bootbox.alert("Please, select one rating!");
+                }
+                event.feature.setProperty('Rating', rating);
+            }
         }
     });
+}
+
+function setColor(event, color) {
+    map.data.overrideStyle(event.feature, {
+        strokeColor: color
+    });
+    event.feature.setProperty("Color", color);
 }
