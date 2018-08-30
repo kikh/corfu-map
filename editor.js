@@ -81,16 +81,20 @@ function RatePath(event){
         var rating = e.options[e.selectedIndex].value;
 	if (rating == 1){
 	    setColor(event, '#750013');
+	    event.feature.setProperty('Rating', rating);
 	}else if (rating == 2){
 	    setColor(event, '#de2443');
+	    event.feature.setProperty('Rating', rating);
 	}else if (rating == 3){	
 	    setColor(event, '#4646cc');
+            event.feature.setProperty('Rating', rating);
 	}else if (rating == 4){	
 	    setColor(event, '#11b27f');
+            event.feature.setProperty('Rating', rating);
 	}else if (rating == 5){	
 	    setColor(event, '#1dc606');
+	    event.feature.setProperty('Rating', rating);
 	}
-        event.feature.setProperty('Rating', rating);
 	document.getElementById("rating-box").style.display = "none";
     });
 }
