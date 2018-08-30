@@ -23,6 +23,9 @@ function init() {
   });
 
   bindDataLayerListeners(map.data);
+  
+  //loading my geojson
+  map.data.loadGeoJson("data/2013097.geojson");
 
   // Retrieve HTML elements.
   var mapContainer = document.getElementById('map-holder');
