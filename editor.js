@@ -27,6 +27,7 @@ function init() {
   //loading my geojson
   map.data.loadGeoJson("data/2013097.geojson");
 	
+  map.data.addListener('click',function (event){ RatePath(event)});
   map.data.addListener('rightclick',function (event){DeletePath(event)});
 
   // Retrieve HTML elements.
@@ -71,4 +72,8 @@ function DeleteAll() {
             map.data.remove(feature);
         });
     }
+}
+
+function RatePath(){
+    document.getElementById("#rating-box"),style.display = "block";
 }
