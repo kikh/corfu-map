@@ -79,6 +79,7 @@ function RatePath(event){
     var e = document.getElementById("rate-selection");
     var rating = e.options[e.selectedIndex].value;
     document.getElementById("left-btn").addEventListener("click", function(){
+	alert(rating);
 	if (rating == 1){
 	    setColor(event, '#750013');
 	}else if (rating == 2){
@@ -91,7 +92,8 @@ function RatePath(event){
 	    setColor(event, '#1dc606');
 	}
         event.feature.setProperty('Rating', rating);
-    }); 
+    });
+     document.getElementById("rating-box").style.display = "none";
 }
 
 function setColor(event, color) {
