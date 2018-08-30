@@ -84,7 +84,7 @@ function RatePath(event){
                 strokeColor: color,
 	        fillColor: color
             });
-            event.feature.setProperty("Color", #fffff);
+            event.feature.setProperty("Color", "#fffff");
 	    event.feature.setProperty('Rating', rating);
 	}else if (rating == 2){
 	    setColor(event, '#de2443');
