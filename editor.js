@@ -74,6 +74,29 @@ function DeleteAll() {
     }
 }
 
-function RatePath(){
+function RatePath(event){
     document.getElementById("rating-box").style.display = "block";
+    var e = document.getElementById("rate-selection");
+    var rating = e.options[e.selectedIndex].value;
+    document.getElementById("left-btn").addEventListener("click", function(){
+	if (rating == 1){
+	    setColor(event, '#750013');
+	}else if (rating == 2){
+	    setColor(event, '#de2443');
+	}else if (rating == 3){	
+	    setColor(event, '#4646cc');
+	}else if (rating == 4){	
+	    setColor(event, '#11b27f');
+	}else if (rating == 5){	
+	    setColor(event, '#1dc606');
+	}
+        event.feature.setProperty('Rating', rating);
+    }); 
+}
+
+function setColor(event, color) {
+    map.data.overrideStyle(event.feature, {
+        strokeColor: color
+    });
+    event.feature.setProperty("Color", color);
 }
