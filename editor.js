@@ -27,7 +27,7 @@ function init() {
   //loading my geojson
   map.data.loadGeoJson("data/2013097.geojson");
 	
-  map.data.addListener('rightclick',function (event){DeleteCurrentPath(event)});
+  map.data.addListener('rightclick',function (event){DeletePath(event)});
 
   // Retrieve HTML elements.
   var mapContainer = document.getElementById('map-holder');
@@ -57,25 +57,11 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
 }
 
-function DeleteCurrentPath(event) {
-    bootbox.confirm({
-        message: "Are you sure you want to delete this path?",
-        buttons: {
-            confirm: {
-                label: 'Yes',
-                className: 'btn-success'
-            },
-            cancel: {
-                label: 'No',
-                className: 'btn-danger'
-            }
-        },
-        callback: function (result) {
-            if (result == true) {
-                map.data.remove(event.feature);
-            }
-        }
-    });
+function DeletePath(event) {
+    var r = confirm("Do you want to delete this path?");
+    if (r == true) {
+        map.data.remove(event.feature);
+    }
 }
 
 
