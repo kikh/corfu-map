@@ -1,6 +1,6 @@
 // The Google Map.
 var map;
-
+var rating = "unknown";
 var geoJsonOutput;
 var downloadLink;
 
@@ -72,6 +72,3 @@ function DeleteAll() {
         });
     }
 }
-
-
-
