@@ -26,6 +26,8 @@ function init() {
   
   //loading my geojson
   map.data.loadGeoJson("data/2013097.geojson");
+	
+  map.data.addListener('rightclick',function (event){DeleteCurrentPath(event)});
 
   // Retrieve HTML elements.
   var mapContainer = document.getElementById('map-holder');
@@ -54,8 +56,6 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
 }
-
-map.data.addListener('rightclick',function (event){DeleteCurrentPath(event)});
 
 function DeleteCurrentPath(event) {
     bootbox.confirm({
