@@ -63,6 +63,9 @@ body {
   left: 50%;
   width: 200px;
   z-index: 100;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
 }
 
 h2{
