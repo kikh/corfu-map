@@ -138,5 +138,5 @@ function setColor(event, color) {
         strokeColor: color,
 	fillColor: color
     });
-    event.feature.properties.Color = color;
+    event.feature.setProperty("Color", value);
 }
