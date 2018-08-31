@@ -143,10 +143,7 @@ function RatePath(event) {
 		    color = '#01dd06';
                     setColor(event, color);
                 }
-                else {
-                    bootbox.alert("Please, select one rating!");
-                }
-                map.data.setStyle(function() {
+                map.data.setStyle(function(event) {
                     event.feature.setProperty("Color", color);
 		    event.feature.setProperty("Rating", rating);
  		});	
