@@ -45,7 +45,7 @@ function init() {
   bindDataLayerListeners(map.data);
   
   //loading my geojson
-  map.data.loadGeoJson("data/2013097.geojson");
+  map.data.loadGeoJson("data/2013097_review.geojson");
 	
   map.data.addListener('click',function (event){ RatePath(event)});
   map.data.addListener('rightclick',function (event){DeletePath(event)});
