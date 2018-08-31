@@ -23,6 +23,21 @@ function init() {
     clickable: true
   });
 
+  map.data.setProperties(function(feature) {
+    var color = "#ffffff";
+    if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
+        feature.setProperty("Rating", rating);
+        feature.setProperty("Color", color);
+    }
+    if (feature.getProperty("Color") != color) {
+        var color = feature.getProperty("Color");
+    }
+    return ({
+        strokeColor: color,
+        strokeWeight: 4
+    });
+ });	
+  
   bindDataLayerListeners(map.data);
   
   //loading my geojson
