@@ -143,10 +143,8 @@ function RatePath(event) {
 		    color = '#01dd06';
                     setColor(event, color);
                 }
-                map.data.setStyle(function(event) {
-                    event.feature.setProperty("Color", color);
-		    event.feature.setProperty("Rating", rating);
- 		});	
+                event.feature.setProperty("Color", color);
+		event.feature.setProperty("Rating", rating);	
             }
         }
     });
