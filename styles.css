@@ -67,7 +67,7 @@ body {
 }
 
 .bootbox{
-  width: 250px;
+  width: 260px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -86,16 +86,23 @@ select{
 
 .btn-default{
   float: right;
+  margin-right: 13px;
+  
 }
 
 .btn-primary{
   float: left;
+  margin-left: 13px;
 }
 
 .btn-primary, .btn-default{
   background-color: #008CBA;
   color: #ffffff;
   border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width 60px;
+  margin-top: 20px;
 }
 
 .btn-primary:hover, .btn-default:hover{
@@ -106,4 +113,6 @@ select{
   position: absolute;
   top: 0;
   left: 0;
+  color: #ffffff;
+  background: #c90000;
 }
