@@ -93,8 +93,9 @@ select{
 }
 
 .btn-primary, .btn-default{
-  background-color: #e0f0fe;
+  background-color: #008CBA;
   color: #ffffff;
+  border: none;
 }
 
 .btn-primary:hover, .btn-default:hover{
@@ -102,5 +103,7 @@ select{
 }
 
 .bootbox-close-button{
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
