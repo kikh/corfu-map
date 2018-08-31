@@ -40,14 +40,17 @@ body {
   position: absolute;
   right:10px;
   z-index:100;
+  padding: 10px;
+  width: 150px;
+  top: 10px;
 }
 
 #delete-all{
-   top:70px;
+   right: 320px;
 }
 
 #toggle-geojson{
-  top:40px;
+  right: 160px;
 }
 
 #download-link{
