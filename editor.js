@@ -39,6 +39,7 @@ function init() {
 	fillColor: color,
         strokeWeight: 5
     });
+    refreshGeoJsonFromData();
  });	
   
   bindDataLayerListeners(map.data);
