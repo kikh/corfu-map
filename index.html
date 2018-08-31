@@ -19,20 +19,6 @@
     </a>
     <button id="toggle-geojson" class="button">Toggle GeoJson</button>
     <button id="delete-all" class="button" onclick="DeleteAll()">Delete all features</button>
-    <div id="rating-box">
-      <h2>Path rating</h2>
-      <select name='rating' id="rate-selection">
-        <option value='1'>very bad</option>
-        <option value='2'>bad</option>
-        <option value='3'>good</option>
-        <option value='4'>very good</option>
-        <option value='5'>excellent</option>
-      </select>
-      <div id="btn-wrap">
-          <button class="modal" id="left-btn">OK</button>
-          <button class="modal" id="right-btn">Cancel</button>
-      </div>
-    </div>
     <script>
       $(document).ready(function(){
         $("#toggle-geojson").click(function(){
