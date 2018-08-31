@@ -27,6 +27,7 @@ function init() {
     if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
         feature.setProperty("Rating", rating);
         feature.setProperty("Color", color);
+	refreshGeoJsonFromData();
     }
     if (feature.getProperty("Color") != color) {
         color = feature.getProperty("Color");
@@ -39,7 +40,6 @@ function init() {
 	fillColor: color,
         strokeWeight: 5
     });
-    refreshGeoJsonFromData();
  });	
   
   bindDataLayerListeners(map.data);
