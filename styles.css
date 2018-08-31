@@ -45,6 +45,7 @@ body {
   top: 10px;
   background-color: #008CBA;
   color: #ffffff;
+  border: none;
 }
 
 .button:hover{
@@ -61,45 +62,6 @@ body {
 
 #download-link{
   top:10px;
-}
-
-#rating-box{
-  text-align: center;
-  border: 1px solid #000000;
-  background:#FFFFFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 250px;
-  z-index: 100;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  display: none;
-}
-
-#btn-wrap{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-}
-
-#left-btn{
-  float: left;
-}
-
-#right-btn{
-  float: right;
-}
-
-h2{
-  pading-top: 20px;
-}
-
-select{
-  width: 90%;
-  margin-bottom: 20px;
 }
 
 .bootbox{
