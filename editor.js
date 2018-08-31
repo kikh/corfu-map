@@ -121,28 +121,36 @@ function RatePath(event) {
                 var rating = "unknown";
                 if (result == 1) {
                     rating = 1;
-                    setColor(event, '#c80627');
+		    color = '#c80627';
+                    setColor(event, color);
                 }
                 else if (result == 2) {
                     rating = 2;
-                    setColor(event, '#fbc646');
+		    color = '#fbc646';
+                    setColor(event, color);
                 }
                 else if (result == 3) {
                     rating = 3;
-                    setColor(event, '#fcff00');
+		    color = '#fcff00';
+                    setColor(event, color);
                 }
                 else if (result == 4) {
                     rating = 4;
-                    setColor(event, '#3728ff');
+		    color = '#3728ff';
+                    setColor(event, color);
                 }
                 else if (result == 5) {
                     rating = 5;
-                    setColor(event, '#01dd06');
+		    color = '#01dd06';
+                    setColor(event, color);
                 }
                 else {
                     bootbox.alert("Please, select one rating!");
                 }
-                event.feature.setProperty(event, "Rating", rating);
+                map.data.setStyle(function() {
+                    event.feature.setProperty("Color", color);
+		    event.feature.setProperty("Rating", rating);
+ 		});	
             }
         }
     });
