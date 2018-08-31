@@ -80,10 +80,27 @@ body {
   background:#FFFFFF;
 }
 
+select{
+  width: 90%;
+}
+
 .btn-default{
-  float: left;
+  float: right;
 }
 
 .btn-primary{
-  float: right;
+  float: left;
+}
+
+.btn-primary, .btn-default{
+  background-color: #e0f0fe;
+  color: #ffffff;
+}
+
+.btn-primary:hover, .btn-default:hover{
+  background-color: #4CAF50;
+}
+
+.bootbox-close-button{
+  float: left;
 }
