@@ -23,7 +23,7 @@ function init() {
     clickable: true
   });
 
-  map.data.setProperties(function(feature) {
+  map.data.setStyle(function(feature) {
     var color = "#ffffff";
     if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
         feature.setProperty("Rating", rating);
