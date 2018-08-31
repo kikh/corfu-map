@@ -31,6 +31,14 @@ function init() {
     if (feature.getProperty("Color") != color) {
         color = feature.getProperty("Color");
     }
+    if (feature.getProperty("Rating") == rating) {
+        color = "#ffffff";
+    }
+    return ({
+        strokeColor: color,
+	fillColor: color,
+        strokeWeight: 5
+    });
  });	
   
   bindDataLayerListeners(map.data);
