@@ -43,14 +43,20 @@ body {
   padding: 10px;
   width: 150px;
   top: 10px;
+  background-color: #008CBA;
+  color: #ffffff;
+}
+
+.button:hover{
+  background-color: #4CAF50;
 }
 
 #delete-all{
-   right: 320px;
+   right: 340px;
 }
 
 #toggle-geojson{
-  right: 160px;
+  right: 180px;
 }
 
 #download-link{
