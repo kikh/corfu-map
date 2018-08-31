@@ -24,13 +24,12 @@ function init() {
   });
 
   map.data.setStyle(function(feature) {
-    var color = "#ffffff";
     if (feature.getProperty("Rating") == null && feature.getProperty("Color") == null ) {
         feature.setProperty("Rating", rating);
         feature.setProperty("Color", color);
     }
     if (feature.getProperty("Color") != color) {
-        var color = feature.getProperty("Color");
+        color = feature.getProperty("Color");
     }
     return ({
         strokeColor: color,
@@ -161,5 +160,4 @@ function setColor(event, color) {
         strokeColor: color,
 	fillColor: color
     });
-    event.feature.setProperty(event, "Color", color);
 }
