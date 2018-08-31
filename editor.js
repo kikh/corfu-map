@@ -121,27 +121,27 @@ function RatePath(event) {
                 if (result == 1) {
                     rating = 1;
 		    color = '#c80627';
-                    etColorRating(event, color, rating)
+                    setColorRating(event, color, rating)
                 }
                 else if (result == 2) {
                     rating = 2;
 		    color = '#fbc646';
-                    etColorRating(event, color, rating)
+                    setColorRating(event, color, rating)
                 }
                 else if (result == 3) {
                     rating = 3;
 		    color = '#fcff00';
-                    etColorRating(event, color, rating)
+                    setColorRating(event, color, rating)
                 }
                 else if (result == 4) {
                     rating = 4;
 		    color = '#3728ff';
-                    etColorRating(event, color, rating)
+                    setColorRating(event, color, rating)
                 }
                 else if (result == 5) {
                     rating = 5;
 		    color = '#01dd06';
-                    etColorRating(event, color, rating)
+                    setColorRating(event, color, rating)
                 }
             }
         }
