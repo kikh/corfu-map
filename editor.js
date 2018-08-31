@@ -52,15 +52,16 @@ function init() {
 	
   map.data.addListener('mouseover',function (event){
   	map.data.overrideStyle(event.feature, {
-        strokeColor: "#000000",
-	fillColor: "#000000"
-    });
+            strokeColor: "#000000",
+	    fillColor: "#000000"
+        });
   });
   map.data.addListener('mouseout',function (event){
   	color = event.feature.getProperty("Color");
-	map.data.overrideStyle(event.feature, {
-        strokeColor: color,
-	fillColor: color
+	    map.data.overrideStyle(event.feature, {
+            strokeColor: color,
+	    fillColor: color
+        });
   });
 
   // Retrieve HTML elements.
