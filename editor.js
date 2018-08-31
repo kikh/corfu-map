@@ -159,4 +159,5 @@ function setColorRating(event, color, rating) {
     });
     event.feature.setProperty("Color", color);
     event.feature.setProperty("Rating", rating);
+    refreshDownloadLinkFromGeoJson()
 }
