@@ -31,10 +31,6 @@ function init() {
     if (feature.getProperty("Color") != color) {
         color = feature.getProperty("Color");
     }
-    return ({
-        strokeColor: color,
-        strokeWeight: 4
-    });
  });	
   
   bindDataLayerListeners(map.data);
